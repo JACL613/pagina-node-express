@@ -115,28 +115,13 @@
 
     <h1>Movie Collection</h1>
 
-    <!-- Lista de películas -->
-    <div class="movie-list">
-        <!-- Tarjeta de película individual -->
-        <div class="movie-card" style="--theme-color: #4caf50;">
-            <img src="https://via.placeholder.com/250x150" alt="Movie Image" />
-            <h3>Green Theme Movie</h3>
-            <p>Descripción breve de la película.</p>
-            <p class="year">Year: 2023</p>
-            <button class="edit-btn" onclick="handleEdit()">Edit</button>
-            <button class="delete-btn" onclick="handleDelete()">Delete</button>
-        </div>
-
-        <div class="movie-card" style="--theme-color: #f44336;">
-            <img src="https://via.placeholder.com/250x150" alt="Movie Image" />
-            <h3>Red Theme Movie</h3>
-            <p>Descripción breve de la película.</p>
-            <p class="year">Year: 2022</p>
-            <button class="edit-btn" onclick="handleEdit()">Edit</button>
-            <button class="delete-btn" onclick="handleDelete()">Delete</button>
-        </div>
-
-        <!-- Puedes replicar más tarjetas con diferentes colores y películas -->
+    <!-- Formulario para agregar/editar película -->
+    <div class="form-container">
+        <input type="text" id="title" placeholder="Title" required />
+        <textarea id="description" placeholder="Description" required></textarea>
+        <input type="text" id="imageUrl" placeholder="Image URL" required />
+        <input type="number" id="year" placeholder="Year" required />
+        <button onclick="handleSave()">Guardar</button>
     </div>
 
     <!-- JavaScript para manejar los botones (sin lógica de negocio) -->

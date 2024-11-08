@@ -1,0 +1,14 @@
+POST http://localhost:3000/api/peliculas/
+Content-Type : application/json
+
+{
+      "title": "Venom: The Last Dance",
+      "descripcion": "Eddie and Venom are on the run. Hunted by both of their worlds and with the net closing in, the duo are forced into a devastating decision that will bring the curtains down on Venom and Eddies last dance.",
+      "genero":[ "Science Fiction", "Action", "Adventure" ],
+      "actores":["Tom Hardy","Chiwetel Ejiofor","Juno Temple","Clark Backo","Rhys Ifans"],
+      "calificacion": 6.642,
+      "fecha_publicacion": "2024-10-22",
+      "duration": "N/A",
+      "coverImage": "https://image.tmdb.org/t/p/w500/aosm8NMQ3UyoBVpSxyimorCQykC.jpg",
+      "backdropImage": "https://image.tmdb.org/t/p/w500/3V4kLQg0kSqPLctI5ziYWabAZYF.jpg"
+} 
