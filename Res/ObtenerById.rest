@@ -1,4 +1,4 @@
-GET http://localhost:3000/api/peliculas/67258433737f4a87be80bbfc
+GET http://localhost:3000/api/peliculas/672e49353541bb1c714fb20c
 Content-Type : application/json
 
 {}  

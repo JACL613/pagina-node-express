@@ -11,16 +11,16 @@ const app = express();
 const PORT = 3000;
 
 // Middleware para servir archivos estáticos
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'dist')));
 app.use(express.json())
 app.use(morgan('dev'))
 app.use(cors()) 
 
 // Rutas
 app.use('/api/peliculas' , routesBasic )
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'index.html'));
-});
+// app.get('/', (req, res) => {
+//     res.sendFile(path.join(__dirname, 'views', 'index.html'));
+// });
 app.get('/CrearPeli', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'formulario.html'));
 });
