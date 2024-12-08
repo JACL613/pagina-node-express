@@ -1,6 +1,7 @@
 const routesBasic = require('express').Router();
-const path = require('path');
-const Peliculas = require('../models/peliculaSchema');
+const Peliculas = require('../Databases/models/pelicula_schema');
+const authMiddleware = require("../middleware/controller_user");
+
 // const webHome = require('../../views/index.html')
 
 routesBasic.get('/', async (req, res) => {
@@ -29,7 +30,7 @@ routesBasic.get('/:id', async (req, res) => {
     }
     // res.send('Bienvenido a la API')
 })
-routesBasic.post('/', async (req, res) => {
+routesBasic.post('/',authMiddleware, async (req, res) => {
 
     const {title, descripcion, genero, calificacion, fecha_publicacion, actores ,  duration, coverImage, backdropImage} = req.body
     if (!title|| !descripcion || !genero || !calificacion || !fecha_publicacion)
@@ -45,7 +46,7 @@ routesBasic.post('/', async (req, res) => {
     }
 })
 
-routesBasic.put('/:id', async (req, res) => {
+routesBasic.put('/:id', authMiddleware,async (req, res) => {
     const {data} = req.body
     const {id} = req.params
     console.log(data, id);
@@ -64,7 +65,7 @@ routesBasic.put('/:id', async (req, res) => {
     }
 })
 
-routesBasic.delete('/:id', async (req, res) => {
+routesBasic.delete('/:id',authMiddleware, async (req, res) => {
     const {id} = req.params
 
     if(!id)return res.json({message: 'error: Faltan datos en la petición', status : 404})

@@ -1,10 +1,11 @@
 POST http://localhost:3000/api/peliculas/
 Content-Type : application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzMzMjgyNjM3LCJleHAiOjE3MzMyODYyMzd9.n5VwFUQ4fweQpTg6la3HFHksRd4UvuLtHS68RF-VX5s
 
 {
-      "title": "Venom: The Last Dance",
+      "title": "Prueba",
       "descripcion": "Eddie and Venom are on the run. Hunted by both of their worlds and with the net closing in, the duo are forced into a devastating decision that will bring the curtains down on Venom and Eddies last dance.",
-      "genero":[ "Science Fiction", "Action", "Adventure" ],
+      "genero":"674fcba3a792c5b22657791a",
       "actores":["Tom Hardy","Chiwetel Ejiofor","Juno Temple","Clark Backo","Rhys Ifans"],
       "calificacion": 6.642,
       "fecha_publicacion": "2024-10-22",
